@@ -1,0 +1,20 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /taotaomall/merchants
+
+spring:
+  application:
+    name: taotaomall-merchants
+  dubbo:
+    server: true
+    protocol:
+      name: dubbo
+      port: 20881
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    application:
+      name: ${spring.application.name}
+  redis:
+    cluster:
+      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003

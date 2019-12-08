@@ -1,0 +1,26 @@
+spring:
+  redis:
+    cluster:
+      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+    host: 127.0.0.1
+    port: 7001
+  application:
+    name: taotaomall-consumer
+  dubbo:
+    server: true
+    protocol:
+      name: dubbo
+      port: 20880
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    application:
+      name: ${spring.application.name}
+    consumer:
+      check: false
+    reference:
+     loadbalance: roundrobin
+server:
+  servlet:
+    context-path: /taotaomall/consumer
+  port: 
+
