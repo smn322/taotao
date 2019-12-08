@@ -17,3 +17,23 @@ spring:
   redis:
     cluster:
       nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+    host: 127.0.0.1
+    port: 7001
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    password: postgres
+    username: postgres
+    url: jdbc:postgresql://127.0.0.1:5432/taotao
+    driver-class-name: org.postgresql.Driver
+    dbcp2:
+      max-wait-millis: 3000
+      initial-size: 10
+      max-idle: 5
+logging:
+  level:
+#    java.sql: debug
+#    org.apache.ibatis: debug
+#    org.mybatis: debug
+    com.smn.it.taotaomall.sso.dao: debug
+
+

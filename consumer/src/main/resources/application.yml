@@ -1,4 +1,14 @@
 spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    password: postgres
+    username: postgres
+    url: jdbc:postgresql://127.0.0.1:5432/taotao
+    driver-class-name: org.postgresql.Driver
+    dbcp2:
+      max-wait-millis: 3000
+      initial-size: 10
+      max-idle: 5
   redis:
     cluster:
       nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
@@ -22,5 +32,5 @@ spring:
 server:
   servlet:
     context-path: /taotaomall/consumer
-  port: 
+  port: 8081
 

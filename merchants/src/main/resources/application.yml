@@ -2,7 +2,6 @@ server:
   port: 8082
   servlet:
     context-path: /taotaomall/merchants
-
 spring:
   application:
     name: taotaomall-merchants
