@@ -16,6 +16,6 @@ public interface RegistryDao {
     @Insert("INSERT INTO public.\"TT_userinfo_t\"( user_account, birthday, passowrd, address, email, phone_number, " +
             " \"ID\", \"UID\") VALUES (#{userAccount,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{password,jdbcType=VARCHAR}, " +
             "#{address,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}," +
-            " #{ID,jdbcType=VARCHAR}, #{UID,jdbcType=VARCHAR})")
+            " #{id,jdbcType=VARCHAR}, #{uid,jdbcType=VARCHAR})")
     int insertOne(UserInfoVO userInfoVO);
 }

@@ -22,9 +22,9 @@ public class UserInfoVO implements Serializable {
 
     private String phoneNumber;
 
-    private String ID;
+    private String id;
 
-    private String UID;
+    private String uid;
 
     public String getUserAccount() {
         return userAccount;
@@ -74,20 +74,20 @@ public class UserInfoVO implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getID() {
-        return ID;
+    public String getId() {
+        return id;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getUID() {
-        return UID;
+    public String getUid() {
+        return uid;
     }
 
-    public void setUID(String UID) {
-        this.UID = UID;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public UserInfoVO() {
@@ -100,6 +100,6 @@ public class UserInfoVO implements Serializable {
         this.address = address;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.ID = ID;
+        this.id = ID;
     }
 }

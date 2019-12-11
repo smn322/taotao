@@ -27,7 +27,7 @@ spring:
 #        max-active: 8
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    password: root
+    password: postgre
     username: postgres
     url: jdbc:postgresql://127.0.0.1:5432/taotao
     driver-class-name: org.postgresql.Driver
