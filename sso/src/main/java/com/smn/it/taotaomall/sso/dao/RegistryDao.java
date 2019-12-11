@@ -17,5 +17,5 @@ public interface RegistryDao {
             " \"ID\", \"UID\") VALUES (#{userAccount,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{password,jdbcType=VARCHAR}, " +
             "#{address,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}," +
             " #{ID,jdbcType=VARCHAR}, #{UID,jdbcType=VARCHAR})")
-    int addOne(UserInfoVO userInfoVO);
+    int insertOne(UserInfoVO userInfoVO);
 }

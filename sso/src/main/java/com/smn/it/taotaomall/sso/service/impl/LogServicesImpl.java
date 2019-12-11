@@ -7,6 +7,7 @@ import com.smn.it.taotaomall.sso.entity.common.UserInfoVO;
 import com.smn.it.taotaomall.sso.service.LogServices;
 import com.smn.it.taotaomall.sso.util.ResultBeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 @Service(interfaceClass = LogServices.class)
@@ -18,8 +19,9 @@ public class LogServicesImpl implements LogServices {
 
     @Override
     public JSONObject login(UserInfoVO userInfoVO) {
-        if(logDao.log(userInfoVO) == 1)
+        if(logDao.login(userInfoVO) == 1)
         {
+
             return ResultBeanUtils.buildDefaultSuccessResult();
         }
         return ResultBeanUtils.buildDefaultFailedResult();
