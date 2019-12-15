@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface LogDao {
-    @Select("SELECT count(1) as count  FROM public.\"TT_userinfo_t\" where user_account = #{userAccount} and passowrd=#{password}")
-    int login(UserInfoVO userInfoVO);
+    @Select("SELECT \"UID\" as uid  FROM public.\"TT_userinfo_t\" where user_account = #{userAccount} and passowrd=#{password}")
+    String login(UserInfoVO userInfoVO);
 }
