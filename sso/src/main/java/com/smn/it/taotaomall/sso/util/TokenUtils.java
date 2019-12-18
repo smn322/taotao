@@ -6,6 +6,6 @@ public class TokenUtils {
     public static final long DEAFAULT_TOKEN_EXPIRED_TIME=300000;
 
     public static String getToken(String userAccount){
-        return TOKEN_PREFIX+userAccount;
+        return TOKEN_PREFIX+userAccount+System.currentTimeMillis();
     }
 }

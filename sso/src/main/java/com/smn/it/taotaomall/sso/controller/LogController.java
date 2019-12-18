@@ -14,7 +14,7 @@ public class LogController {
     @Autowired
     private LogServices logServices;
     @PostMapping("/log")
-    public JSONObject log(@RequestBody UserInfoVO userInfoVO){
+    public JSONObject log( @RequestBody UserInfoVO userInfoVO){
         return logServices.login(userInfoVO);
     }
 }

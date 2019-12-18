@@ -23,10 +23,11 @@ public class LogServicesImpl implements LogServices {
     @Override
     public JSONObject login(UserInfoVO userInfoVO) {
         String uid = null;
+        String token= null;
         if((uid=logDao.login(userInfoVO))!= null)
         {
-            String token = TokenUtils.getToken(userInfoVO.getUserAccount());
-            boolean absent = redisConfig.putTokenIfAbsent(token, uid, TokenUtils.DEAFAULT_TOKEN_EXPIRED_TIME);
+            token = TokenUtils.getToken(userInfoVO.getUserAccount());
+            boolean absent = redisConfig.putTokenIfAbsent(uid, token, TokenUtils.DEAFAULT_TOKEN_EXPIRED_TIME);
             if(absent)
             {
                 JSONObject data = new JSONObject();
